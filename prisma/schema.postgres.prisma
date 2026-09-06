@@ -1,0 +1,77 @@
+/* Schéma PostgreSQL — utilisé UNIQUEMENT pour le déploiement cloud
+   (Vercel + Neon). La copie locale (sandbox) utilise prisma/schema.prisma
+   en SQLite : ne pas supprimer l'un des deux fichiers.
+
+   Lors du déploiement sur Vercel, vercel.json lance automatiquement :
+     prisma generate --schema=prisma/schema.postgres.prisma
+     prisma db push   --schema=prisma/schema.postgres.prisma
+   avec DATABASE_URL = chaîne de connexion Neon (voir GUIDE-DEPLOIEMENT.md).
+*/
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   String?
+  published Boolean  @default(false)
+  authorId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Événements de la mosquée — modifiables depuis le panneau d'administration du site
+model MosqueEvent {
+  id        Int      @id @default(autoincrement())
+  title     String
+  date      DateTime // UTC minuit du jour affiché
+  time      String   @default("") // "HH:MM" ou "" si non précisé
+  place     String   @default("")
+  imageUrl  String   @default("") // réservé pour un futur affichage avec image
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Audios hébergés par l'administration (recommandations de l'Imam) —
+// affichés en tête de la section « Les nouveautés » avec un lecteur intégré.
+model MosqueAudio {
+  id        Int      @id @default(autoincrement())
+  title     String
+  audioUrl  String   // /uploads/… , https://… (Blob Vercel ou lien externe)
+  createdAt DateTime @default(now())
+}
+
+// Dons via PayTech
+model Donation {
+  id            Int      @id @default(autoincrement())
+  refCommand    String   @unique
+  token         String?
+  itemName      String
+  amount        Int
+  currency      String   @default("XOF")
+  purpose       String   @default("don_libre")
+  donorName     String?
+  donorEmail    String?
+  donorPhone    String?
+  status        String   @default("PENDING") // PENDING | SUCCESS | CANCELLED | FAILED
+  paymentMethod String?
+  env           String   @default("test")
+  lastIpnEvent  String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

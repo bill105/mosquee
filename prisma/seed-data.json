@@ -1,0 +1,66 @@
+{
+  "exportedAt": "2026-09-06T16:59:44.171Z",
+  "events": [
+    {
+      "id": 1,
+      "title": "Conférence : La famille en Islam",
+      "date": "2027-02-28T00:00:00.000Z",
+      "time": "18:30",
+      "place": "Salle principale",
+      "imageUrl": "",
+      "createdAt": "2026-09-06T00:45:55.856Z",
+      "updatedAt": "2026-09-06T10:29:49.078Z"
+    },
+    {
+      "id": 2,
+      "title": "Cercle d'étude du Coran",
+      "date": "2027-03-05T00:00:00.000Z",
+      "time": "14:00",
+      "place": "Salle de cours",
+      "imageUrl": "",
+      "createdAt": "2026-09-06T00:45:55.858Z",
+      "updatedAt": "2026-09-06T00:45:55.858Z"
+    },
+    {
+      "id": 3,
+      "title": "Khutba spéciale du vendredi",
+      "date": "2027-03-12T00:00:00.000Z",
+      "time": "13:15",
+      "place": "Mosquée — Hall",
+      "imageUrl": "",
+      "createdAt": "2026-09-06T00:45:55.858Z",
+      "updatedAt": "2026-09-06T00:45:55.858Z"
+    },
+    {
+      "id": 4,
+      "title": "Nuit de prière (Qiyam)",
+      "date": "2027-03-20T00:00:00.000Z",
+      "time": "02:00",
+      "place": "Mosquée — Hall",
+      "imageUrl": "",
+      "createdAt": "2026-09-06T00:45:55.859Z",
+      "updatedAt": "2026-09-06T00:45:55.859Z"
+    },
+    {
+      "id": 5,
+      "title": "Atelier Tajwid pour débutants",
+      "date": "2027-04-02T00:00:00.000Z",
+      "time": "16:00",
+      "place": "Salle de cours",
+      "imageUrl": "",
+      "createdAt": "2026-09-06T00:45:55.860Z",
+      "updatedAt": "2026-09-06T00:45:55.860Z"
+    },
+    {
+      "id": 6,
+      "title": "Distribution de repas (Sadaqa)",
+      "date": "2027-04-10T00:00:00.000Z",
+      "time": "12:00",
+      "place": "Cour de la mosquée",
+      "imageUrl": "",
+      "createdAt": "2026-09-06T00:45:55.861Z",
+      "updatedAt": "2026-09-06T00:45:55.861Z"
+    }
+  ],
+  "audios": []
+}
