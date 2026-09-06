@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mettre le site en ligne — Guide pas-à-pas | Mosquée Hadja Yah Diakite</title>
+<style>
+  :root{
+    --green:#0d3b2e; --green2:#14523f; --gold:#c9a227; --gold2:#e3bf4d;
+    --cream:#faf6ec; --sand:#e7ddc6; --ink:#22302a; --red:#b91c1c; --ok:#15803d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--ink);line-height:1.65}
+  .wrap{max-width:820px;margin:0 auto;padding:24px 18px 80px}
+  header.hero{background:linear-gradient(135deg,var(--green) 0%,var(--green2) 100%);color:#fff;border-radius:20px;padding:36px 28px;text-align:center;box-shadow:0 10px 30px rgba(13,59,46,.25)}
+  header.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.25}
+  header.hero .crescent{font-size:2.4rem}
+  header.hero p.sub{margin-top:10px;color:#e8e2cf;font-size:1rem}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;font-size:.8rem;font-weight:bold;letter-spacing:.02em}
+  .intro{background:#fff;border:1px solid var(--sand);border-radius:16px;padding:20px 22px;margin-top:22px}
+  .intro h2{color:var(--green);font-size:1.15rem;margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:#fff;border-radius:12px;overflow:hidden}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #eee8d8;font-size:.93rem;vertical-align:top}
+  th{background:var(--green);color:#fff;font-size:.85rem;letter-spacing:.04em}
+  tr:last-child td{border-bottom:none}
+  .step{background:#fff;border:1px solid var(--sand);border-radius:16px;margin-top:26px;overflow:hidden}
+  .step-head{display:flex;align-items:center;gap:14px;padding:18px 22px;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff}
+  .step-num{flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--green);display:grid;place-items:center;font-size:1.4rem;font-weight:bold;font-family:Arial,sans-serif}
+  .step-head h2{font-size:1.2rem;line-height:1.3}
+  .step-head small{display:block;color:#d9d2ba;font-weight:normal;margin-top:2px}
+  .step-body{padding:20px 22px}
+  .step-body ol{margin-left:22px}
+  .step-body ol li{margin-bottom:12px}
+  .btn-name{background:#eef3ef;border:1px solid #cfe0d4;border-radius:6px;padding:1px 8px;font-family:Arial,sans-serif;font-size:.85em;font-weight:bold;color:var(--green);white-space:nowrap}
+  .tip{background:#f4f9f4;border-left:4px solid var(--ok);border-radius:0 10px 10px 0;padding:12px 14px;margin:14px 0;font-size:.93rem}
+  .warn{background:#fdf6ec;border-left:4px solid #d97706;border-radius:0 10px 10px 0;padding:12px 14px;margin:14px 0;font-size:.93rem}
+  .danger{background:#fdf1f1;border-left:4px solid var(--red);border-radius:0 10px 10px 0;padding:12px 14px;margin:14px 0;font-size:.93rem}
+  .download-cta{display:inline-block;background:var(--gold);color:var(--green);font-weight:bold;text-decoration:none;border-radius:999px;padding:12px 26px;margin:6px 0;box-shadow:0 4px 14px rgba(201,162,39,.35);font-family:Arial,sans-serif}
+  .download-cta:hover{background:var(--gold2)}
+  .checklist{list-style:none;margin-left:0}
+  .checklist li{padding-left:30px;position:relative;margin-bottom:10px}
+  .checklist li::before{content:"✅";position:absolute;left:0}
+  .var-name{font-family:monospace;background:#f1efe6;border-radius:6px;padding:2px 7px;font-size:.86em;font-weight:bold;color:var(--green);white-space:nowrap}
+  .mono{font-family:monospace;background:#f1efe6;border-radius:6px;padding:1px 6px;font-size:.9em}
+  footer{margin-top:40px;text-align:center;color:#8a8570;font-size:.85rem}
+  .stepfinal{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;border-radius:16px;padding:26px 24px;margin-top:26px;text-align:center}
+  .stepfinal h2{color:var(--gold2);font-size:1.4rem;margin-bottom:8px}
+  @media print{ body{background:#fff} .step,.intro{break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="crescent">🕌</div>
+    <h1>Mettre le site de la mosquée en ligne<br>sur un vrai serveur — gratuitement</h1>
+    <p class="sub">Mosquée Hadja Yah Diakite · Guide pas-à-pas illustré · Aucune compétence technique requise</p>
+    <div class="badges">
+      <span class="badge">⏱️ 30 à 45 minutes</span>
+      <span class="badge">💰 100 % gratuit</span>
+      <span class="badge">🔒 Clés en sécurité</span>
+      <span class="badge">🎵 Événements &amp; audios modifiables en ligne</span>
+    </div>
+  </header>
+
+  <div class="intro">
+    <h2>Comment ça marche ? (en une phrase)</h2>
+    <p>Le site a besoin de <strong>3 choses gratuites</strong> pour vivre sur internet — comme une maison a besoin d'un terrain, d'une fondation et d'une adresse :</p>
+    <table>
+      <tr><th>Service</th><th>C'est quoi ?</th><th>Comme…</th></tr>
+      <tr><td><strong>1. GitHub</strong></td><td>Là où on <strong>dépose les fichiers</strong> du site</td><td>📦 La valise</td></tr>
+      <tr><td><strong>2. Neon</strong></td><td>La <strong>mémoire</strong> (événements, audios, dons)</td><td>🧠 Le cahier de records</td></tr>
+      <tr><td><strong>3. Vercel</strong></td><td>Le <strong>serveur</strong> qui affiche le site au monde</td><td>💡 L'interrupteur</td></tr>
+    </table>
+    <p style="margin-top:12px">À la fin, votre site sera sur une adresse du type <span class="mono">https://mosquee-xxx.vercel.app</span> — et vous pourrez y reconnecter votre domaine <strong>mosque.billgatenadir.com</strong>.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">0</div>
+      <h2>Avant de commencer<small>Préparez le kit du site (5 minutes)</small></h2>
+    </div>
+    <div class="step-body">
+      <ol>
+        <li>Téléchargez le kit du site : ouvrez le <strong>panneau d'administration</strong> du site (bouton ⚙ / 🔐 dans le pied de page), puis cliquez sur <span class="btn-name">⬇️ Kit du site (.zip)</span> — ou directement ici : <a class="download-cta" href="/mosquee-site-source.zip" download>⬇️ Télécharger le kit (.zip)</a></li>
+        <li>Ouvrez le fichier téléchargé, faites un <strong>clic droit</strong> → <span class="btn-name">Extraire tout…</span> → <span class="btn-name">Extraire</span>. Vous obtenez un dossier (ex. <span class="mono">mosquee-site-source</span>). <strong>Laissez ce dossier ouvert.</strong></li>
+      </ol>
+      <div class="tip">💡 Le kit contient tout le site, <strong>sans vos clés secrètes</strong> (c'est voulu : vous les collerez vous-même en toute sécurité à l'étape 3).</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">1</div>
+      <h2>GitHub — déposer les fichiers<small>≈ 10 minutes · site : github.com</small></h2>
+    </div>
+    <div class="step-body">
+      <ol>
+        <li>Allez sur <strong>github.com</strong> et cliquez sur <span class="btn-name">Sign up</span> (créer un compte). Entrez votre e-mail, un mot de passe, un nom d'utilisateur (ex. <span class="mono">mosquee-hadja</span>). <strong>Notez-les !</strong></li>
+        <li>GitHub envoie un <strong>code de vérification par e-mail</strong> → recopiez-le sur le site.</li>
+        <li>Une fois connecté, en haut à droite cliquez sur le <strong>+</strong> puis <span class="btn-name">New repository</span>.</li>
+        <li>Remplissez ainsi : Nom du dépôt : <span class="btn-name">mosquee</span> · Choisissez <span class="btn-name">Public</span> · Ne touchez à rien d'autre · Cliquez sur <span class="btn-name">Create repository</span>.</li>
+        <li>Sur la page qui s'affiche, cliquez sur le lien <strong>« uploading an existing file »</strong> (téléverser un fichier existant).</li>
+        <li><strong>Ouvrez votre dossier extrait</strong>, sélectionnez <strong>TOUT son contenu</strong> (Ctrl+A), puis <strong>glissez-déposez</strong> tout au milieu de la page GitHub. Attendez la fin de l'envoi (la barre doit être pleine).</li>
+        <li>Cliquez sur le gros bouton vert <span class="btn-name">Commit changes</span>. C'est fini pour GitHub ✅</li>
+      </ol>
+      <div class="warn">⚠️ Si le dossier contient un fichier <span class="mono">.env</span> ou un dossier <span class="mono">db</span>, ne les téléversez pas (le kit n'en contient normalement pas — c'est une protection).</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">2</div>
+      <h2>Neon — créer la mémoire<small>≈ 5 minutes · site : neon.tech</small></h2>
+    </div>
+    <div class="step-body">
+      <ol>
+        <li>Allez sur <strong>neon.tech</strong> et cliquez sur <span class="btn-name">Sign up</span>. Choisissez <span class="btn-name">Continue with GitHub</span> (le plus simple : votre compte GitHub sert de clé).</li>
+        <li>Une fois connecté, cliquez sur <span class="btn-name">Create project</span> (ou <span class="btn-name">New project</span>).</li>
+        <li>Nom du projet : <span class="btn-name">mosquee</span> · laissez les autres choix par défaut · cliquez <span class="btn-name">Create</span>.</li>
+        <li>Neon affiche une <strong>chaîne de connexion</strong> qui commence par <span class="mono">postgresql://…</span> (dans « Connection Details » ou « Connection string »).</li>
+        <li>Cliquez sur l'icône <strong>copier 📋</strong> à côté de cette chaîne, puis <strong>collez-la dans un fichier texte ou une note</strong> sur votre téléphone/ordinateur. On l'utilise à l'étape 3.</li>
+      </ol>
+      <div class="tip">💡 Cette chaîne ressemble à : <span class="mono">postgresql://utilisateur:motdepasse@ep-xxxx.eu-central-1.aws.neon.tech/neondb?sslmode=require</span> — c'est <strong>secret</strong>, comme une clé de maison : ne l'envoyez à personne.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">3</div>
+      <h2>Vercel — allumer le site<small>≈ 15 minutes · site : vercel.com</small></h2>
+    </div>
+    <div class="step-body">
+      <ol>
+        <li>Allez sur <strong>vercel.com</strong> et cliquez sur <span class="btn-name">Sign Up</span> → choisissez <span class="btn-name">Continue with GitHub</span> → autorisez Vercel.</li>
+        <li>Cliquez sur <span class="btn-name">Add New…</span> → <span class="btn-name">Project</span>.</li>
+        <li>Dans la liste, trouvez <strong>mosquee</strong> et cliquez sur <span class="btn-name">Import</span>.</li>
+        <li><strong>AVANT de cliquer sur Deploy :</strong> sur la même page, ouvrez la section <span class="btn-name">Environment Variables</span> (Variables d'environnement). Vous allez ajouter <strong>5 lignes</strong> : pour chacune, collez le <em>Name</em> puis la <em>Value</em>, puis cliquez <span class="btn-name">Add</span>.</li>
+      </ol>
+      <table>
+        <tr><th>Name (nom)</th><th>Value (valeur)</th></tr>
+        <tr>
+          <td><span class="var-name">DATABASE_URL</span></td>
+          <td>La chaîne <span class="mono">postgresql://…</span> copiée à l'<strong>étape 2</strong></td>
+        </tr>
+        <tr>
+          <td><span class="var-name">PAYTECH_API_KEY</span></td>
+          <td>Votre <strong>clé API PayTech</strong> (fournie dans le message qui accompagne ce guide)</td>
+        </tr>
+        <tr>
+          <td><span class="var-name">PAYTECH_API_SECRET</span></td>
+          <td>Votre <strong>clé secrète PayTech</strong> (même message)</td>
+        </tr>
+        <tr>
+          <td><span class="var-name">PAYTECH_ENV</span></td>
+          <td><span class="mono">test</span> &nbsp;(pour les paiements d'essai — on passera à <span class="mono">prod</span> plus tard)</td>
+        </tr>
+        <tr>
+          <td><span class="var-name">ADMIN_PASSWORD</span></td>
+          <td>Votre <strong>mot de passe administrateur</strong> (même message)</td>
+        </tr>
+      </table>
+      <ol start="5" style="margin-top:14px">
+        <li>Maintenant cliquez sur <span class="btn-name">Deploy</span> et attendez <strong>2 à 3 minutes</strong> (des messages défilent, c'est normal).</li>
+        <li>Quand l'écran affiche une <strong>confettis/félicitations 🎉</strong>, cliquez sur <span class="btn-name">Continue to Dashboard</span> puis sur <span class="btn-name">Visit</span> : <strong>votre site est en ligne !</strong></li>
+      </ol>
+      <div class="tip">💡 Vercel crée et remplit automatiquement la base de données (vos 6 événements y seront déjà). Les prochains changements se feront <strong>directement dans le panneau ⚙ Administration du site en ligne</strong> — plus besoin de re-télécharger de fichier !</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">✔</div>
+      <h2>Vérifier que tout fonctionne<small>2 minutes</small></h2>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li>La page d'accueil s'affiche avec les images.</li>
+        <li>L'onglet <strong>Événements</strong> montre vos événements.</li>
+        <li>Le bouton <strong>Faire un don</strong> ouvre la page de paiement PayTech.</li>
+        <li>Le panneau <strong>⚙ Administration</strong> s'ouvre avec votre mot de passe.</li>
+        <li>En cas de souci : onglet <strong>Deployments</strong> sur Vercel → cliquez <span class="btn-name">⋯</span> → <span class="btn-name">Redeploy</span>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">🌐</div>
+      <h2>Optionnel — remettre votre domaine<small>mosque.billgatenadir.com</small></h2>
+    </div>
+    <div class="step-body">
+      <ol>
+        <li>Dans Vercel : votre projet → <span class="btn-name">Settings</span> → <span class="btn-name">Domains</span> → <span class="btn-name">Add</span> → tapez <span class="mono">mosque.billgatenadir.com</span>.</li>
+        <li>Vercel affiche 1 ou 2 lignes <strong>DNS</strong> à copier (une adresse <span class="mono">A</span> ou <span class="mono">CNAME</span>).</li>
+        <li>Chez votre hébergeur actuel (là où le domaine est géré), remplacez les anciens DNS par ceux donnés par Vercel.</li>
+        <li>Attendez de 15 minutes à quelques heures — Vercel installe le <strong>HTTPS</strong> automatiquement. 🎉</li>
+      </ol>
+      <div class="warn">⚠️ Cette étape se fait <strong>après</strong> que le site fonctionne sur l'adresse .vercel.app. Si votre hébergeur actuel a un tableau de bord compliqué, dites-le-moi et je vous guiderai écran par écran.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">🔒</div>
+      <h2>Sécurité de vos clés<small>À lire absolument</small></h2>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li>Les clés PayTech et le mot de passe admin vivent <strong>uniquement</strong> dans les <strong>Environment Variables de Vercel</strong> — jamais dans le code, jamais sur GitHub.</li>
+        <li>Le kit .zip que vous téléchargez <strong>ne contient aucune clé</strong> : vous pouvez le partager sans risque.</li>
+        <li>Ne copiez jamais les clés dans un message WhatsApp, un e-mail ou un fichier Word.</li>
+        <li>Si vous soupçonnez une fuite : changez le mot de passe admin (Vercel → Settings → Environment Variables → Redeploy).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">🛠</div>
+      <h2>Problèmes fréquents<small>Et leurs solutions</small></h2>
+    </div>
+    <div class="step-body">
+      <table>
+        <tr><th>Problème</th><th>Solution</th></tr>
+        <tr><td>Le déploiement échoue (Deployment failed)</td><td>Vérifiez les 5 variables (noms EXACTS, sans espace). Puis Deployments → ⋯ → Redeploy.</td></tr>
+        <tr><td>« 500 » ou page d'erreur sur le site</td><td>La base n'est pas connectée : vérifiez <span class="var-name">DATABASE_URL</span> (étape 2), puis Redeploy.</td></tr>
+        <tr><td>Les événements n'apparaissent pas</td><td>Attendez 1 minute et rechargez (Ctrl+R). Sinon Redeploy une fois.</td></tr>
+        <tr><td>Le bouton Faire un don affiche une erreur</td><td>Vérifiez <span class="var-name">PAYTECH_API_KEY</span> et <span class="var-name">PAYTECH_API_SECRET</span> (copiées en entier, sans espace).</td></tr>
+        <tr><td>Vous êtes bloqué quelque part</td><td>Faites une capture d'écran et envoyez-la-moi : je vous indique exactement où cliquer.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="stepfinal">
+    <h2>🕊️ Après la mise en ligne</h2>
+    <p style="max-width:640px;margin:0 auto">Votre mosquée aura un <strong>vrai site vivant</strong> : événements et audios modifiables depuis le panneau d'administration, dons PayTech fonctionnels, HTTPS sécurisé, et tout ça <strong>gratuitement</strong>. Barak'Allahu fikoum !</p>
+  </div>
+
+  <footer>
+    Mosquée Hadja Yah Diakite · Bingerville, Côte d'Ivoire — Guide de déploiement Vercel + Neon + GitHub
+  </footer>
+
+</div>
+</body>
+</html>
